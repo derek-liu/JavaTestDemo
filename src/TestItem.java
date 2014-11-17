@@ -58,7 +58,8 @@ public class TestItem {
         clazz = Class.forName(className);
 
         System.out.println("调用无参");
-        Method method = clazz.getMethod("printInfo");
+        Method method = clazz.getDeclaredMethod("printInfo");
+        method.setAccessible(true);//调用私有方法关键
         method.invoke(clazz.newInstance());
 
         System.out.println("调用无有参");

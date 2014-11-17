@@ -25,7 +25,7 @@ public class TestInnerClass {
         return mName;
     }
 
-    public void printInfo() {
+    private void printInfo() {
         printInfo("无参数");
     }
     public void printInfo(String content) {
